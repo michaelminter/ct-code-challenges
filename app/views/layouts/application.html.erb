@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CasetabsDemo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-light bg-white">
+      <a href="/" class="navbar-brand">Casetabs Demo</a>
+    </nav>
+
+    <div class="container-fluid gedf-wrapper">
+      <%= yield %>
+    </div>
+  </body>
+</html>

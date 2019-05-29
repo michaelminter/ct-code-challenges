@@ -1,0 +1,52 @@
+Here you go
+
+There are 3 coding challenges, followed by a sample Rails application. Please complete the solutions to these problems in either Ruby (ideally) or Javascript, within 24 hours.
+
+Coding Challenges:this
+
+1. (Ruby/JS) Convert a string to a hash
+Given the following string:
+
+str = "{key:[[value_1, value_2],[value_3, value4]], 5:10:00AM]}"
+
+Write a function that can convert it to this hash/object:
+
+h = {"key" => [["value_1", "value_2"],["value_3", "value4"]], 5=>"10:00AM"}
+
+Please note that the brackets are unbalanced on purpose.
+2. (Ruby/JS) Write a class where methods can be initialized.
+
+Given any arbitrary hash, e.g.
+
+h = {"this" => [1,2,3,4,5,6], "that" => ['here', 'there', 'everywhere'], :other => 100}
+
+Write a class that has methods named after each key in the hash, where each method returns the value for each key. For example, for the hash given above, it should be possible to do the following:
+
+c = Sample.new(h)
+c.this == [1,2,3,4,5,6]
+c.that == ['here', 'there', 'everywhere']
+c.other == 100
+
+3. (Ruby/JS) Count maximum string of zeros
+
+A string of zeros within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
+
+For example, number 9 has binary representation 1001 and contains a string of zeros of length 2. The number 529 has binary representation 1000010001 and contains two zero gaps: one of length 4 and one of length 3. The number 20 has binary representation 10100 and contains one gap of length 1, trailing zeros are not included. The number 15 has binary representation 1111 and has no zero gaps.
+
+Write a function called zeros_count that, given a positive integer N, returns the length of its longest zeros surrounded by ‘1’. The function should return 0 if N doesn’t contain any zeroes.  Describe the algorithm’s time complexity and space complexity.
+
+For example, given N = 1041 the function should return 5, because N has binary representation 10000010001
+
+4. Sample Rails application
+
+Creatie a small rails app that can query and display the twitter API. No login functionality is required, although you will need to sign up for the free Twitter API to query data.
+
+Casetabs’ UI is React-driven, but that is not a requirement of this application (although it is preferred).
+
+Requirements, in order of importance:
+Uses the Twitter API
+Visiting the home page defaults to a user page with the last 20 tweets from @casetabs
+Any @name in a tweet should link to a user page, also with the last 20 tweets for that user
+Cache identical twitter API calls for 5 minutes.
+Hovering over any @names in tweets will bring up a modal/tooltip giving a description of that user (# tweets, # of followers)
+Any additional styling or improvements to the user experience are a plus.
