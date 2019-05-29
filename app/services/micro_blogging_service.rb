@@ -3,7 +3,7 @@ class MicroBloggingService
 
   attr_accessor :auth_token
 
-  def initialize(auth_token)
+  def initialize(auth_token = nil)
     @auth_token = auth_token
   end
 
